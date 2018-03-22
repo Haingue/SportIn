@@ -14,4 +14,5 @@ public class PageDroiteFragment extends Fragment{
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.page_droite_layout, container, false);
     }
+
 }
