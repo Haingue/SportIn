@@ -2,4 +2,9 @@
     <string name="app_name">SportIn</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="slogan1">Le networking par le sport</string>
+    <string name="slogan2">Le networking pour le sport</string>
+    <string name="boutonEnr" >S\'enregistrer</string>
+    <string name="phraseAccueil">Créez, invitez les évènements sportifs de votre choix en quelques secondes</string>
+    <string name="phraseAcceuil2">Constituez votre réseau, Partagez du sport et des contacts</string>
 </resources>
