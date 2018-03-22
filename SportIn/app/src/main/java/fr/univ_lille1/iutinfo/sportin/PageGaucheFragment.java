@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 public class PageGaucheFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //System.out.print(R.layout.page_gauche_layout.);
         return inflater.inflate(R.layout.page_gauche_layout, container, false);
     }
 }
