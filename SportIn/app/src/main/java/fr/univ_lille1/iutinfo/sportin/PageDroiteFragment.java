@@ -4,6 +4,7 @@ package fr.univ_lille1.iutinfo.sportin;
  * Created by magnierb on 22/03/18.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,5 +15,6 @@ public class PageDroiteFragment extends Fragment{
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.page_droite_layout, container, false);
     }
+
 
 }
