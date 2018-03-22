@@ -12,9 +12,10 @@ public class PageLogin extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setContentView(R.layout.activity_login);
 
-        //set content view AFTER ABOVE sequence (to avoid crash)
-        setContentView(R.layout.activity_login);
+
+
     }
 
 
