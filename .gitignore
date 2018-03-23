@@ -8,5 +8,14 @@
 /captures
 .externalNativeBuild
 SportInAndroid.iml
+<<<<<<< HEAD
 SportIn/app/proguard-rules.pro
 SportIn/app/build/*
+=======
+app/build.gradle  
+app/libs  
+app/proguard-rules.pro
+SportIn/SportIn.iml
+SportIn/app/app.iml
+SportIn/local.properties
+>>>>>>> 578bb50aaaaddda10f42f491bca7c23c153e70c3

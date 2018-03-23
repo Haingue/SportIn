@@ -16,6 +16,9 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.net.Uri;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 /**
  * Created by martele on 22/03/18.
  */
@@ -31,74 +34,41 @@ public class PageLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_login);
-        Intent i = new Intent(this, ConnexionServ.class);
-        startActivity(i);
     }
 
-    public void onValider(View view){
+    public void popUp(View view){
 
-        getUser();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Erreur de connexion");
+        builder.setMessage("Votre établissement n'est pas encore partenaire de SportIn. Contactez nous pour utiliser l'app :)");
+        builder.setPositiveButton("Contactez nous",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                                "mailto","contact@sportin.link", null));
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Erreur de connexion à SportIn");
+                        intent.putExtra(Intent.EXTRA_TEXT, "Bonjour, votre app ne marche pas. La bise :p");
+                        startActivity(Intent.createChooser(intent, "Choisissez une application pour envoyer votre mail :"));
 
-    }
-
-    public void getUser(){
-        final JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
-                ConnexionServ.addresseServer+"/v1/tempo/user", null, new Response.Listener<JSONObject>() {
-
+                    }
+                });
+        builder.setNegativeButton("Retour", new DialogInterface.OnClickListener() {
             @Override
-            public void onResponse(JSONObject response) {
-                Log.d(TAG, response.toString());
+            public void onClick(DialogInterface dialog, int which) {
 
-                try {
-                    // Parsing json object response
-                    // response will be a json object
-                    int uno = response.getInt("uno");
-                    String login = response.getString("login");
-                    String pass = response.getString("pass");
-                    String nom = response.getString("nom");
-                    String prenom = response.getString("prenom");
-                    String fonction = response.getString("fonction");
-                    String corp = response.getString("corp");
-
-                    jsonResponse = "";
-                    jsonResponse += "uno: "+uno;
-                    jsonResponse += "Nom: " + nom + "\n\n";
-                    jsonResponse += "Prenom: " + prenom + "\n\n";
-                    jsonResponse += "Email: " + login + "\n\n";
-                    jsonResponse += "Password: " + pass + "\n\n";
-                    jsonResponse += "Entreprise: " + corp + "\n\n";
-                    jsonResponse += "Fonction: " + fonction+ "\n\n";
-
-                    System.out.println(jsonResponse);
-                    //txtResponse.setText(jsonResponse);
-                    Toast.makeText(getApplicationContext(), jsonResponse, Toast.LENGTH_LONG).show();
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),
-                            "Error: " + e.getMessage(),
-                            Toast.LENGTH_LONG).show();
-                }
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(TAG, "Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
-                // hide the progress dialog
             }
         });
 
-        // Adding request to request queue
-        ConnexionServ c = ConnexionServ.getInstance();
-        if(c != null) {
-            c.addToRequestQueue(jsonObjReq);
-        }else{
-            System.out.println("-------------------------------\nNull\n----------------------------------------\n");
-        }
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void onNav(View view){
+        Intent i=new Intent(this,PageNav.class);
+        startActivity(i);
     }
 
 }

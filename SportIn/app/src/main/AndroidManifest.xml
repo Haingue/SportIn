@@ -26,7 +26,10 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ConnexionServ"
-            android:label="Connection"
+            android:label="Connection">
+        </activity>
+        <activity android:name=".PageNav"
+            android:label="Nav"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
