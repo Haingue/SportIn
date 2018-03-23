@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class PageNav extends AppCompatActivity
@@ -90,6 +91,11 @@ public class PageNav extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void afficherForm(View view){
+        Intent i=new Intent(this,PageCreerEvent.class);
+        startActivity(i);
     }
 }
 

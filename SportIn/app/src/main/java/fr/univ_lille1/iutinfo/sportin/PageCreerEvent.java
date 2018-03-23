@@ -11,7 +11,7 @@ public class PageCreerEvent extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.activity_login);
+        super.setContentView(R.layout.activity_creer_event);
     }
 
 }
