@@ -1,7 +1,0 @@
-#Fri Mar 23 09:28:00 CET 2018
-base.0=/home/infoetu/busschaa/ProjetAgil/SportIn/SportIn/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1fda816020fb272a088680b3fb371dee817414f6
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/home/infoetu/busschaa/ProjetAgil/SportIn/SportIn/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a6449393de9b0cee69667195a7f079385422ee3d/classes.dex
-base.1=/home/infoetu/busschaa/ProjetAgil/SportIn/SportIn/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a6449393de9b0cee69667195a7f079385422ee3d
-file.0=/home/infoetu/busschaa/ProjetAgil/SportIn/SportIn/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1fda816020fb272a088680b3fb371dee817414f6/classes.dex
