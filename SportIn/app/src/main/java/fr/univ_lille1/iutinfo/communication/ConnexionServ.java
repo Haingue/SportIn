@@ -46,7 +46,8 @@ public class ConnexionServ extends AppCompatActivity {
         //UserDao user = new UserDao();
 
         /*
-        TODO ERREUR ICI DEBUG 
+        TODO ERREUR ICI DEBUG
+        TODO ON PASSE PAS PART LE TRY CATCH
 
 
 
