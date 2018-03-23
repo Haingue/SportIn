@@ -7,14 +7,6 @@
 /build
 /captures
 .externalNativeBuild
-gradle.properties  
-local.properties
-build.gradle  
-gradlew            
-settings.gradle
-gradle        
-gradlew.bat        
 SportInAndroid.iml
-app/build.gradle  
-app/libs  
-app/proguard-rules.pro
+SportIn/app/build.gradle  
+SportIn/app/proguard-rules.pro
