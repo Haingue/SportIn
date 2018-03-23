@@ -34,7 +34,7 @@ public class PageLogin extends AppCompatActivity {
 
     // private Toast txtResponse;
 
-    private String jsonResponse;
+    //private String jsonResponse;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +49,13 @@ public class PageLogin extends AppCompatActivity {
 
         ConnexionServ con = ConnexionServ.getInstance();
         UserDao user = con.getUser(textLogin.getText().toString(), textPass.getText().toString());
-        /* il faut attendre que le user soit init avant de l'utiliser */
-        if (!user.getNom().isEmpty()){//textPass.getText().equals(user.getPassword())) {
+        Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
 
-            Intent acceuil = new Intent(this, PageNav.class);
-            startActivity(acceuil);
+        /* il faut attendre que le user soit init avant de l'utiliser */
+        if (! user.equals(null)){//textPass.getText().equals(user.getPassword())) {
+            Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
+            /*Intent acceuil = new Intent(this, PageNav.class);
+            startActivity(acceuil);*/
 
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

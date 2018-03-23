@@ -26,7 +26,7 @@ import fr.univ_lille1.iutinfo.metier.UserDao;
 
 public class ConnexionServ extends AppCompatActivity {
 
-    public static String addresseServer = "http://172.18.49.6:8080";
+    public static String addresseServer = "http://172.16.139.1:8080";
 
     public static final String TAG = ConnexionServ.class.getSimpleName();
 
@@ -44,6 +44,14 @@ public class ConnexionServ extends AppCompatActivity {
 
     public UserDao getUser(String login, String password){
         //UserDao user = new UserDao();
+
+        /*
+        TODO ERREUR ICI DEBUG 
+
+
+
+
+         */
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
                 ConnexionServ.addresseServer+"/v1/user/"+login, null, new Response.Listener<JSONObject>() {
 

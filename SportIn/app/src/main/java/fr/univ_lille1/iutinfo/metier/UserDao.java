@@ -24,6 +24,9 @@ public class UserDao {
         this.email = email;
         this.password = password;
     }
+    public UserDao(String nom,String pwd){
+
+    }
 
     public static UserDao initUserDao(JSONObject response) throws JSONException {
         UserDao tmp = new UserDao();

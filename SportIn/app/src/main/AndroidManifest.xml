@@ -26,7 +26,7 @@
             android:label="Login"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="communication.ConnexionServ"
+        <activity android:name="fr.univ_lille1.iutinfo.communication.ConnexionServ"
             android:label="Connection">
         </activity>
         <activity

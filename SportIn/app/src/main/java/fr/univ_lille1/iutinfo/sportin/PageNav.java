@@ -16,8 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
-import communication.ConnexionServ;
+import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageNav extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
