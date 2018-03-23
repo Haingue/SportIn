@@ -21,8 +21,8 @@ import android.net.Uri;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
-import communication.ConnexionServ;
-import metier.UserDao;
+import fr.univ_lille1.iutinfo.communication.ConnexionServ;
+import fr.univ_lille1.iutinfo.metier.UserDao;
 
 /**
  * Created by martele on 22/03/18.
