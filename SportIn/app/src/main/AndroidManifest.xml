@@ -21,16 +21,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PageLogin"
+        <activity
+            android:name=".PageLogin"
             android:label="Login"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ConnexionServ"
             android:label="Connection">
         </activity>
-        <activity android:name=".PageNav"
+        <activity
+            android:name=".PageNav"
             android:label="Nav"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:parentActivityName=".PageNav"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.univ_lille1.iutinfo.sportin.PageNav" />
         </activity>
     </application>
 
