@@ -1,0 +1,17 @@
+package fr.univ_lille1.iutinfo.sportin;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+/**
+ * Created by magnierb on 23/03/18.
+ */
+
+public class PageCreerEvent extends AppCompatActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        super.setContentView(R.layout.activity_login);
+    }
+
+}
