@@ -25,6 +25,10 @@
             android:label="Login"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".ConnexionServ"
+            android:label="Connection"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

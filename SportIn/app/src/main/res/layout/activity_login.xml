@@ -56,6 +56,7 @@
         android:layout_marginTop="78dp"
         android:background="@drawable/fond_bouton"
         android:backgroundTint="@color/color_sportin"
+        android:onClick="onValider"
         android:text="C'est parti !"
         android:textColor="@android:color/background_light"
         app:layout_constraintHorizontal_bias="0.501"
