@@ -7,4 +7,6 @@
     <string name="boutonEnr" >S\'enregistrer</string>
     <string name="phraseAccueil">Créez, invitez les évènements sportifs de votre choix en quelques secondes</string>
     <string name="phraseAcceuil2">Constituez votre réseau, Partagez du sport et des contacts</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
