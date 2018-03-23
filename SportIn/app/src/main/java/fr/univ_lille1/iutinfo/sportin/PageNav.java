@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import communication.ConnexionServ;
+
 public class PageNav extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     @Override
@@ -35,8 +37,8 @@ public class PageNav extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Intent connect = new Intent(this, ConnexionServ.class);
-        startActivity(connect);
+        /*Intent connect = new Intent(this, ConnexionServ.class);
+        startActivity(connect);*/
     }
 
     @Override
@@ -81,7 +83,7 @@ public class PageNav extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
             System.out.println("===============================\nClick On Profil\n==================================\n");
-            Toast.makeText(getApplicationContext(),ConnexionServ.getInstance().getUser(), Toast.LENGTH_LONG);
+            //Toast.makeText(getApplicationContext(),ConnexionServ.getInstance().getUser().toString(), Toast.LENGTH_LONG);
         } else if (id == R.id.nav_slideshow) {
 
 
