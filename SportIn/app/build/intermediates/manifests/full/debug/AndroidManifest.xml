@@ -36,6 +36,11 @@
             android:label="Login"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name="fr.univ_lille1.iutinfo.sportin.PageNav"
+            android:label="Nav"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

@@ -51,6 +51,10 @@ public class PageLogin extends AppCompatActivity {
         dialog.show();
 
     }
+    public void onNav(View view){
+        Intent i=new Intent(this,PageNav.class);
+        startActivity(i);
+    }
 
 
 

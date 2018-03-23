@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "outputFile": "/home/infoetu/busschaa/ProjetAgil/SportIn/SportIn/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/116d22130ab480ac23300ec7abc2ac1f045386f4/output/res/values/values.xml",
+                    "file": "/usr/local/virtual_machine/android-2.3/busschaa/.android/build-cache/116d22130ab480ac23300ec7abc2ac1f045386f4/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
