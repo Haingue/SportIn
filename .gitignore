@@ -8,5 +8,5 @@
 /captures
 .externalNativeBuild
 SportInAndroid.iml
-SportIn/app/build.gradle  
+SportIn/app/build  
 SportIn/app/proguard-rules.pro
