@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/4451d25324f80970469ea197981179ede20ee153/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/infoetu/parissej/git/SportIn/SportIn/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/usr/local/virtual_machine/android-2.3/parissej/.android/build-cache/11d9f4dffd63849aeed38696c934af79fd4f1f1f/output/res/color-v23/abc_tint_default.xml"
+    }
+]
