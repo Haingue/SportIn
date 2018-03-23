@@ -18,3 +18,6 @@ SportInAndroid.iml
 app/build.gradle  
 app/libs  
 app/proguard-rules.pro
+SportIn/SportIn.iml
+SportIn/app/app.iml
+SportIn/local.properties
