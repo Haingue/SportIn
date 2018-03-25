@@ -3,26 +3,16 @@ package fr.univ_lille1.iutinfo.sportin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.net.Uri;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
-import fr.univ_lille1.iutinfo.metier.UserDao;
+import fr.univ_lille1.iutinfo.metier.UserDto;
 
 /**
  * Created by martele on 22/03/18.
@@ -48,11 +38,11 @@ public class PageLogin extends AppCompatActivity {
         EditText textPass = (EditText) findViewById(R.id.mdp);
 
         ConnexionServ con = ConnexionServ.getInstance();
-        UserDao user = con.getUser(textLogin.getText().toString(), textPass.getText().toString());
+        UserDto user = con.getUser(textLogin.getText().toString(), textPass.getText().toString());
         Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
 
         /* il faut attendre que le user soit init avant de l'utiliser */
-        if (! user.equals(null)){//textPass.getText().equals(user.getPassword())) {
+        if (user != null && !user.getNom().isEmpty()){//textPass.getText().equals(user.getPassword())) {
             Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
             /*Intent acceuil = new Intent(this, PageNav.class);
             startActivity(acceuil);*/

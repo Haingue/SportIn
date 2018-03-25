@@ -1,7 +1,6 @@
 package fr.univ_lille1.iutinfo.communication;
 
 import android.os.Bundle;
-import android.os.health.SystemHealthManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,7 +17,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import fr.univ_lille1.iutinfo.metier.UserDao;
+import fr.univ_lille1.iutinfo.metier.UserDto;
 
 /**
  * Created by hainguef on 23/03/18.
@@ -34,7 +33,7 @@ public class ConnexionServ extends AppCompatActivity {
 
     private static ConnexionServ mInstance;
 
-    private UserDao user = new UserDao();
+    private UserDto user = new UserDto();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +41,8 @@ public class ConnexionServ extends AppCompatActivity {
         finish();
     }
 
-    public UserDao getUser(String login, String password){
-        //UserDao user = new UserDao();
+    public UserDto getUser(String login, String password){
+        //UserDto user = new UserDto();
 
         /*
         TODO ERREUR ICI DEBUG
@@ -60,7 +59,7 @@ public class ConnexionServ extends AppCompatActivity {
                 Log.d(TAG, response.toString());
                 try {
                     Toast.makeText(getApplicationContext(), "debut init", Toast.LENGTH_LONG).show();
-                    user = UserDao.initUserDao(response);
+                    user = UserDto.initUserDao(response);
                     System.out.println(user.toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -90,7 +89,7 @@ public class ConnexionServ extends AppCompatActivity {
         System.out.println("-----------------------------\n"+user+"----------------------------------");
         Toast.makeText(getApplicationContext(), "fin de methode", Toast.LENGTH_LONG).show();
 
-        return user;
+        return this.user;
     }
 
     public static synchronized ConnexionServ getInstance() {
