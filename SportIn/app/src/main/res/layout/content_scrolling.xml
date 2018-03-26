@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="fr.univ_lille1.iutinfo.sportin.PageLogin">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -122,9 +117,8 @@
             <ListView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="385dp" />
 
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -61,14 +61,14 @@ public class PageNav extends AppCompatActivity
 
         listProg = new ArrayList<>();
         //TODO modifier le for (en while enventuellement?)
-        for(int i = 0;i<10 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
-            String nomSport ="Nom du sport";
-            String nomSalle="Nom de la salle";
-            String jour = "Jour";
-            String heure = "heure";
-            String prix="Prix";
-            String nbInscrits = "nbInscrits";
-            String nbParticipantNeeded = "nbParticipantNeeded";
+        for(int i = 0;i<4 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
+            String nomSport ="Futsal";
+            String nomSalle="Footsal, Villeneuve d'Ascq Cousinerie";
+            String jour = "Mercredi";
+            String heure = "19h00";
+            String prix="8";
+            String nbInscrits = "8";
+            String nbParticipantNeeded = "10";
             listProg.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
         }
 
@@ -84,8 +84,7 @@ public class PageNav extends AppCompatActivity
             listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
         }
 
-        Button b = (Button) findViewById(R.id.renc);
-        b.performClick();
+        ((Button) findViewById(R.id.renc)).performClick();
 
     }
 
@@ -118,23 +117,37 @@ public class PageNav extends AppCompatActivity
             return true;
         }
 
+       /* switch (id) {
+            case R.id.nav_profil:
+                nav_profil(item);
+                return true;
+            case R.id.nav_event:
+                nav_event(item);
+                return true;
+            case R.id.nav_chat:
+                return false;
+            default:
+                return false;
+        }*/
+
+
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            System.out.println("===============================\nClick On Profil\n==================================\n");
-            //Toast.makeText(getApplicationContext(),ConnexionServ.getInstance().getUser().toString(), Toast.LENGTH_LONG);
-        } else if (id == R.id.nav_slideshow) {
-
-
+        if (id == R.id.nav_event) {
+            Intent i=new Intent(this,PageNav.class);
+            startActivity(i);
+        } else if (id == R.id.nav_profil) {
+            Intent i=new Intent(this,/*PageCreerEvent*/PageProfil.class);
+            startActivity(i);
+        } else if (id == R.id.nav_chat) {
+            Intent i=new Intent(this,PageCreerEvent.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
