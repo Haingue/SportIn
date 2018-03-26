@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/profilLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="16dp"
+            android:text="Mon Profil"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sportInLogo"
+            android:layout_width="81dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/profilLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_sportin_blanc" />
+
+        <ImageView
+            android:id="@+id/profilImage"
+            android:layout_width="103dp"
+            android:layout_height="93dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilLabel"
+            app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+        <TextView
+            android:id="@+id/nomprenomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="Louis Burette"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/profilImage"
+            app:layout_constraintRight_toRightOf="@+id/profilImage"
+            app:layout_constraintTop_toBottomOf="@+id/profilImage" />
+
+        <TextView
+            android:id="@+id/fonctionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="Sport In - CEO"
+            android:textColor="@color/color_sportin"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="@+id/profilImage"
+            app:layout_constraintRight_toRightOf="@+id/profilImage"
+            app:layout_constraintTop_toBottomOf="@+id/nomprenomLabel" />
+
+        <ImageView
+            android:id="@+id/imageLien"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="@+id/fonctionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fonctionLabel"
+            app:srcCompat="?attr/actionModeShareDrawable" />
+
+        <TextView
+            android:id="@+id/labelParticipantsNum"
+            android:layout_width="41dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="22"
+            android:textColor="@color/color_sportin"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintLeft_toLeftOf="@+id/labelParticipations"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelParticipations" />
+
+        <TextView
+            android:id="@+id/labelEventsNum"
+            android:layout_width="41dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="-15dp"
+            android:text="54"
+            android:textColor="@color/color_sportin"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/labelEvent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEvent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="41dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="25dp"
+            android:text="54"
+            android:textColor="@color/color_sportin"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/imageLien"
+            app:layout_constraintRight_toRightOf="@+id/fonctionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fonctionLabel" />
+
+        <TextView
+            android:id="@+id/labelEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="24dp"
+            android:text="Evenements créés"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageLien" />
+
+        <TextView
+            android:id="@+id/labelParticipations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Participations"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintLeft_toRightOf="@+id/labelEvent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageLien" />
+
+        <Button
+            android:id="@+id/modifierCompteBouton"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fond_bouton"
+            android:onClick="modifierCompte"
+            android:text="Modifier mon compte"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEventsNum" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
