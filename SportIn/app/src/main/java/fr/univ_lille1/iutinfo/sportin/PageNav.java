@@ -60,6 +60,7 @@ public class PageNav extends AppCompatActivity
         startActivity(connect);*/
 
         listProg = new ArrayList<>();
+        //TODO modifier le for (en while enventuellement?)
         for(int i = 0;i<10 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
             String nomSport ="Nom du sport";
             String nomSalle="Nom de la salle";
@@ -150,8 +151,6 @@ public class PageNav extends AppCompatActivity
         r.setTextColor(Color.BLACK);
         r.setBackgroundColor(Color.LTGRAY);
 
-        //TODO afficher list
-
         list = (ListView) findViewById(R.id.list);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,
                 android.R.layout.simple_list_item_1, listProg);
@@ -167,8 +166,6 @@ public class PageNav extends AppCompatActivity
         Button p = (Button) findViewById(R.id.prog);
         p.setTextColor(Color.BLACK);
         p.setBackgroundColor(Color.LTGRAY);
-
-        //TODO afficher list
 
          list= (ListView) findViewById(R.id.list);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,

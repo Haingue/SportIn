@@ -69,14 +69,16 @@
         android:id="@+id/button"
         android:layout_width="84dp"
         android:layout_height="38dp"
-        android:layout_marginLeft="148dp"
         android:layout_marginTop="45dp"
         android:background="@drawable/fond_bouton"
         android:onClick="onNav"
         android:text="Accéder"
         android:textColor="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valider" />
+        app:layout_constraintTop_toBottomOf="@+id/valider"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
