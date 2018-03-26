@@ -143,7 +143,7 @@ public class PageNav extends AppCompatActivity
             Intent i=new Intent(this,PageNav.class);
             startActivity(i);
         } else if (id == R.id.nav_profil) {
-            Intent i=new Intent(this,PageCreerEvent/*PageProfil*/.class);
+            Intent i=new Intent(this,/*PageCreerEvent*/PageProfil.class);
             startActivity(i);
         } else if (id == R.id.nav_chat) {
             Intent i=new Intent(this,PageCreerEvent.class);

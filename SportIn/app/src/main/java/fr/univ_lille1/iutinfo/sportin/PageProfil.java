@@ -30,10 +30,11 @@ import java.util.List;
 import java.util.ListIterator;
 
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
-public class PageProfil{
+public class PageProfil extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState) {
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.profil);
     }
 
 
