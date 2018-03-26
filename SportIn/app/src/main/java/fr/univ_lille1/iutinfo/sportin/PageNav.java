@@ -4,6 +4,7 @@ package fr.univ_lille1.iutinfo.sportin;
  * Created by busschaa on 23/03/18.
  */
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.support.design.widget.NavigationView;
@@ -15,11 +16,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageNav extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private String[] prenoms;
+
+    private String[] noms;
+
+    ListView list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +55,33 @@ public class PageNav extends AppCompatActivity
 
         /*Intent connect = new Intent(this, ConnexionServ.class);
         startActivity(connect);*/
+
+        noms = new String[]{
+                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n3/4",
+                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n2/4",
+                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n3/4",
+                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n1/4",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10"
+        };
+
+        prenoms = new String[]{
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
+                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10"
+        };
+
     }
 
     @Override
@@ -92,6 +135,41 @@ public class PageNav extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void programme(View view){
+      Button p = (Button) findViewById(R.id.prog);
+        p.setTextColor(Color.WHITE);
+        p.setBackgroundColor(Color.BLACK);
+
+        Button r = (Button) findViewById(R.id.renc);
+        r.setTextColor(Color.BLACK);
+        r.setBackgroundColor(Color.LTGRAY);
+
+        //TODO afficher list
+
+        list = (ListView) findViewById(R.id.list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,
+                android.R.layout.simple_list_item_1, prenoms);
+        list.setAdapter(adapter);
+
+    }
+
+    public void rencontre(View view){
+        Button r = (Button) findViewById(R.id.renc);
+        r.setTextColor(Color.WHITE);
+        r.setBackgroundColor(Color.BLACK);
+
+        Button p = (Button) findViewById(R.id.prog);
+        p.setTextColor(Color.BLACK);
+        p.setBackgroundColor(Color.LTGRAY);
+
+        //TODO afficher list
+
+         list= (ListView) findViewById(R.id.list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,
+                android.R.layout.simple_list_item_1, noms);
+        list.setAdapter(adapter);
     }
 
     public void afficherForm(View view){

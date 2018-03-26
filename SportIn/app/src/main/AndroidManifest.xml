@@ -31,8 +31,9 @@
         </activity>
         <activity
             android:name=".PageNav"
-            android:label="Nav"
+            android:label="SportIn"
             android:theme="@style/AppTheme.NoActionBar">
+
 
         </activity>
         <activity
