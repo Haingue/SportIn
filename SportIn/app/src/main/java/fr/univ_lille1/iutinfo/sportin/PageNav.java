@@ -61,7 +61,7 @@ public class PageNav extends AppCompatActivity
 
         listProg = new ArrayList<>();
         //TODO modifier le for (en while enventuellement?)
-        for(int i = 0;i<10 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
+        for(int i = 0;i<4 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
             String nomSport ="Nom du sport";
             String nomSalle="Nom de la salle";
             String jour = "Jour";
@@ -84,8 +84,7 @@ public class PageNav extends AppCompatActivity
             listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
         }
 
-        Button b = (Button) findViewById(R.id.renc);
-        b.performClick();
+        ((Button) findViewById(R.id.renc)).performClick();
 
     }
 
