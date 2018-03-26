@@ -74,7 +74,7 @@ public class PageNav extends AppCompatActivity
             String nbInscrits = "nbInscrits";
             String nbParticipantNeeded = "nbParticipantNeeded";
             listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);*/
-            listProg.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
+            listRenc.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
         }
 
     }
