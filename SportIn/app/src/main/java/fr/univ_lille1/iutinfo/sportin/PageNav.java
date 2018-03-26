@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -23,16 +24,18 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageNav extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private String[] prenoms;
-
-    private String[] noms;
+    private List<String> listProg;
+    private List<String> listRenc;
 
     ListView list;
 
@@ -56,35 +59,19 @@ public class PageNav extends AppCompatActivity
         /*Intent connect = new Intent(this, ConnexionServ.class);
         startActivity(connect);*/
 
-        noms = new String[]{
-                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n3/4",
-                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n2/4",
-                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n3/4",
-                "Tennis\nFOS Tennis\nSamedi, 11h00\n15€\n1/4",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10"
-        };
+        listProg = new ArrayList<>();
+        for(int i = 0;i<10 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
+            listProg.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
+        }
 
-        prenoms = new String[]{
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10",
-                "Futsal\nFootsal blabla\nMercredi,19h00\n8€\n8/10"
-        };
+        listRenc = new ArrayList<>();
+        for(int i = 0;i<10 ; i++){ //TODO ajouter 10 rencontres interessantes pour l'utilisateur
+            listRenc.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
+        }
 
     }
 
-    @Override
+    @Override 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -150,7 +137,7 @@ public class PageNav extends AppCompatActivity
 
         list = (ListView) findViewById(R.id.list);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,
-                android.R.layout.simple_list_item_1, prenoms);
+                android.R.layout.simple_list_item_1, listProg);
         list.setAdapter(adapter);
 
     }
@@ -168,7 +155,7 @@ public class PageNav extends AppCompatActivity
 
          list= (ListView) findViewById(R.id.list);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageNav.this,
-                android.R.layout.simple_list_item_1, noms);
+                android.R.layout.simple_list_item_1, listRenc);
         list.setAdapter(adapter);
     }
 
