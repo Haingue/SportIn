@@ -61,26 +61,20 @@ public class PageNav extends AppCompatActivity
 
         listProg = new ArrayList<>();
         for(int i = 0;i<10 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
-            String nomSport ="";
-            String nomSalle="";
-            String jour = "Jour";
-            String heure = "heure";
-            String prix="Prix";
-            String nbInscrits = "nbInscrits";
-            String nbParticipantNeeded = "nbParticipantNeeded";
-            listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
+            listProg.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
         }
 
         listRenc = new ArrayList<>();
         for(int i = 0;i<10 ; i++){ //TODO ajouter 10 rencontres interessantes pour l'utilisateur
-            String nomSport ="";
+            /*String nomSport ="";
             String nomSalle="";
             String jour = "Jour";
             String heure = "heure";
             String prix="Prix";
             String nbInscrits = "nbInscrits";
             String nbParticipantNeeded = "nbParticipantNeeded";
-            listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
+            listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);*/
+            listProg.add("Nom du sport"+"\n"+"Nom de la salle"+"\n"+"Jour"+","+"heure"+"\n"+"Prix"+"€"+"\n"+"nbInscrits"+"/"+"nbParticipantNeeded");
         }
 
     }
