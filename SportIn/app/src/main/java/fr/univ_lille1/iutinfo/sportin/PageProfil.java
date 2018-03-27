@@ -67,8 +67,7 @@ public class PageProfil extends AppCompatActivity {
      * @param view
      */
     public void modifierCompte(View view) {
-        //TODO envoyer sur la future page de modification de compte
-        Intent i=new Intent(this,PageProfil.class);
+        Intent i=new Intent(this,PageModifierCompte.class);
         startActivity(i);
     }
 
