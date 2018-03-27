@@ -87,7 +87,7 @@ public class ConnexionServ extends AppCompatActivity {
             System.out.println("-------------------------------\nNull\n----------------------------------------\n");
         }
         System.out.println("-----------------------------\n"+user+"----------------------------------");
-        Toast.makeText(getApplicationContext(), "fin de methode", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "fin de methode", Toast.LENGTH_LONG).show();
 
         return this.user;
     }

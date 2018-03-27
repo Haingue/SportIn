@@ -39,9 +39,9 @@ public class PageLogin extends AppCompatActivity {
 
         ConnexionServ con = ConnexionServ.getInstance();
         UserDto user = con.getUser(textLogin.getText().toString(), textPass.getText().toString());
-        Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
 
-        //TODO gerer la page login 
+        //TODO gerer la page login
         /* il faut attendre que le user soit init avant de l'utiliser */
         /*if (user != null && !user.getNom().isEmpty()){//textPass.getText().equals(user.getPassword())) {
             Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
