@@ -57,7 +57,7 @@ public class PageCreerEvent extends AppCompatActivity {
             EditText price =(EditText) findViewById(R.id.prixEvent);
             EditText participants =(EditText) findViewById(R.id.nbPartEvent);
 
-            String url = "http://172.18.49.2:8080/v1/events";
+            String url = "http://51.255.131.190/v1/events";
             Map<String, String> params = new HashMap<>();
 
             params.put("label", label.getText().toString());
