@@ -59,6 +59,15 @@ public class PageNav extends AppCompatActivity
         /*Intent connect = new Intent(this, ConnexionServ.class);
         startActivity(connect);*/
 
+        //TODO lister les events de la bdd
+
+
+
+
+
+
+
+
         listProg = new ArrayList<>();
         //TODO modifier le for (en while enventuellement?)
         for(int i = 0;i<4 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
