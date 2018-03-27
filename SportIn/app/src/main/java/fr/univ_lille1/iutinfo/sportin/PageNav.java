@@ -58,7 +58,7 @@ public class PageNav extends AppCompatActivity
     private String pass="titi:titi";
     JSONArray array;
 
-    private String url = "http://172.18.49.2:8080/v1/events";
+    private String url = "http://51.255.131.190/v1/events";
 
     ListView list;
 
