@@ -41,13 +41,14 @@ public class PageLogin extends AppCompatActivity {
         UserDto user = con.getUser(textLogin.getText().toString(), textPass.getText().toString());
         Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
 
+        //TODO gerer la page login 
         /* il faut attendre que le user soit init avant de l'utiliser */
-        if (user != null && !user.getNom().isEmpty()){//textPass.getText().equals(user.getPassword())) {
+        /*if (user != null && !user.getNom().isEmpty()){//textPass.getText().equals(user.getPassword())) {
             Toast.makeText(getApplicationContext(),user.toString(),Toast.LENGTH_LONG).show();
             /*Intent acceuil = new Intent(this, PageNav.class);
-            startActivity(acceuil);*/
+            startActivity(acceuil);
 
-        } else {
+        } else {*/
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(true);
             builder.setTitle("Erreur de connexion");
@@ -74,7 +75,7 @@ public class PageLogin extends AppCompatActivity {
             dialog.show();
         }
 
-    }
+    //}
 
     public void onNav(View view) {
         Intent i = new Intent(this, PageNav.class);

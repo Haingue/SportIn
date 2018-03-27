@@ -113,9 +113,9 @@ public class PageNav extends AppCompatActivity
                                 String jour=object.getString("dateEvent");
                                 int prix = object.getInt("price");
                                 int nbParticipantNeeded = object.getInt("participants");
-                                Toast.makeText(getApplicationContext(),object.toString(),Toast.LENGTH_LONG).show();
+
                                 String res=nomEvent+"\n"+jour+"\n"+prix+"€"+"\n0"+"/"+nbParticipantNeeded;
-                                Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
+
                                 listProg.add(res);
 
 
