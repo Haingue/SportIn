@@ -30,12 +30,20 @@ import java.util.List;
 import java.util.ListIterator;
 
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
-public class PageProfil extends AppCompatActivity{
+public class PageProfil extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profil);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
     }
 
+    public void modifierCompte(View view) {
+        //TODO envoyer sur la future page de modification de compte
+        Intent i=new Intent(this,PageProfil.class);
+        startActivity(i);
+    }
 
 }
