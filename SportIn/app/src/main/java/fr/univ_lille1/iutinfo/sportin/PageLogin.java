@@ -60,7 +60,7 @@ public class PageLogin extends AppCompatActivity {
                             Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                                     "mailto", "contact@sportin.link", null));
                             intent.putExtra(Intent.EXTRA_SUBJECT, "Erreur de connexion à SportIn");
-                            intent.putExtra(Intent.EXTRA_TEXT, "Bonjour, votre app ne marche pas. La bise :p");
+                            //intent.putExtra(Intent.EXTRA_TEXT, "Bonjour, votre app ne marche pas. La bise :p");
                             startActivity(Intent.createChooser(intent, "Choisissez une application pour envoyer votre mail :"));
 
                         }
