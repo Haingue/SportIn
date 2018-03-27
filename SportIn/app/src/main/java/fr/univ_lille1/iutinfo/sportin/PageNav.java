@@ -82,6 +82,7 @@ public class PageNav extends AppCompatActivity
         /*Intent connect = new Intent(this, ConnexionServ.class);
         startActivity(connect);*/
 
+
         //TODO lister les events de la bdd
 
         // Initialize a new RequestQueue instance
@@ -154,8 +155,11 @@ public class PageNav extends AppCompatActivity
         queue.add(JsonRequest);
 
 
+
+
         listRenc = new ArrayList<>();
-        for(int i = 0;i<10 ; i++){ //TODO ajouter 10 rencontres interessantes pour l'utilisateur
+        //Initialisation de la liste de manière automatisée
+        /*for(int i = 0;i<10 ; i++){ //TODO ajouter 10 rencontres interessantes pour l'utilisateur
             String nomSport ="Nom du sport";
             String nomSalle="Nom de la salle";
             String jour = "Jour";
@@ -164,7 +168,16 @@ public class PageNav extends AppCompatActivity
             String nbInscrits = "nbInscrits";
             String nbParticipantNeeded = "nbParticipantNeeded";
             listRenc.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
-        }
+        }*/
+
+        //Initialisation de la liste de manière statique
+        listRenc.add("Running"+"\n"+"Vestiaires du bâtiment A"+"\n"+
+                "Jeudi"+","+"12h30"+"\n"+"0"+"€"+"\n" +
+                "8"+"/"+"illimité");
+
+        listRenc.add("Futsal"+"\n"+"Urban Socer, Lezennes"+"\n"+
+                "Demain"+","+"18h00"+"\n"+"7"+"€"+"\n" +
+                "8"+"/"+"10");
 
         ((Button) findViewById(R.id.renc)).performClick();
 
@@ -199,24 +212,11 @@ public class PageNav extends AppCompatActivity
             return true;
         }
 
-       /* switch (id) {
-            case R.id.nav_profil:
-                nav_profil(item);
-                return true;
-            case R.id.nav_event:
-                nav_event(item);
-                return true;
-            case R.id.nav_chat:
-                return false;
-            default:
-                return false;
-        }*/
-
-
         return super.onOptionsItemSelected(item);
     }
 
     @Override
+
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
@@ -228,7 +228,8 @@ public class PageNav extends AppCompatActivity
             Intent i=new Intent(this,PageProfil.class);
             startActivity(i);
         } else if (id == R.id.nav_chat) {
-            Intent i=new Intent(this,PageCreerEvent.class);
+            //TODO envoyer à la page de chat
+            Intent i=new Intent(this,PageCreerEvent/*PageChat*/.class);
             startActivity(i);
         }
 
@@ -237,6 +238,11 @@ public class PageNav extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Affiche la liste des "Mes rencontres"
+     * et change la couleur des boutons rencontre et programme
+     * @param view
+     */
     public void programme(View view){
       Button p = (Button) findViewById(R.id.prog);
         p.setTextColor(Color.WHITE);
@@ -253,6 +259,11 @@ public class PageNav extends AppCompatActivity
 
     }
 
+    /**
+     * Affiche la liste des "Rencontres sportives"
+     * et change la couleur des boutons rencontre et programme
+     * @param view
+     */
     public void rencontre(View view){
         Button r = (Button) findViewById(R.id.renc);
         r.setTextColor(Color.WHITE);
@@ -268,6 +279,10 @@ public class PageNav extends AppCompatActivity
         list.setAdapter(adapter);
     }
 
+    /**
+     * Affiche la page de formulaire pour créer un évènement
+     * @param view
+     */
     public void afficherForm(View view){
         Intent i=new Intent(this,PageCreerEvent.class);
         startActivity(i);

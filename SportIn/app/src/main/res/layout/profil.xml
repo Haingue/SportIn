@@ -19,7 +19,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="150dp" />
 
         <ImageView
             android:id="@+id/sportInLogo"
@@ -27,54 +28,59 @@
             android:layout_height="27dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="14dp"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/profilLabel"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_sportin_blanc" />
+            app:srcCompat="@drawable/logo_sportin_blanc"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <ImageView
             android:id="@+id/profilImage"
             android:layout_width="103dp"
             android:layout_height="93dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_report_image"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="31dp"
             app:layout_constraintTop_toBottomOf="@+id/profilLabel"
-            app:srcCompat="@android:drawable/ic_menu_report_image" />
+            app:layout_constraintRight_toLeftOf="@+id/profilLabel"
+            android:layout_marginRight="8dp" />
 
         <TextView
             android:id="@+id/nomprenomLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="0dp"
             android:text="Louis Burette"
             android:textSize="21sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="@+id/profilImage"
-            app:layout_constraintRight_toRightOf="@+id/profilImage"
-            app:layout_constraintTop_toBottomOf="@+id/profilImage" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/profilImage"
+            android:layout_marginTop="9dp"
+            app:layout_constraintLeft_toRightOf="@+id/profilImage"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.2" />
 
         <TextView
             android:id="@+id/fonctionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="0dp"
             android:text="Sport In - CEO"
             android:textColor="@color/color_sportin"
             android:textSize="18sp"
             android:textStyle="italic"
-            app:layout_constraintLeft_toLeftOf="@+id/profilImage"
-            app:layout_constraintRight_toRightOf="@+id/profilImage"
-            app:layout_constraintTop_toBottomOf="@+id/nomprenomLabel" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/nomprenomLabel"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/nomprenomLabel"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/nomprenomLabel" />
 
         <ImageView
             android:id="@+id/imageLien"
@@ -84,7 +90,8 @@
             android:layout_marginTop="25dp"
             app:layout_constraintLeft_toLeftOf="@+id/fonctionLabel"
             app:layout_constraintTop_toBottomOf="@+id/fonctionLabel"
-            app:srcCompat="?attr/actionModeShareDrawable" />
+            app:srcCompat="?attr/actionModeShareDrawable"
+            android:layout_marginStart="12dp" />
 
         <TextView
             android:id="@+id/labelParticipantsNum"
@@ -92,14 +99,15 @@
             android:layout_height="34dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="0dp"
             android:text="22"
             android:textColor="@color/color_sportin"
             android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintLeft_toLeftOf="@+id/labelParticipations"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelParticipations" />
+            app:layout_constraintTop_toBottomOf="@+id/labelParticipations"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/labelEventsNum"
@@ -107,14 +115,15 @@
             android:layout_height="34dp"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="-15dp"
             android:text="54"
             android:textColor="@color/color_sportin"
             android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.617"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="@+id/labelEvent"
-            app:layout_constraintTop_toBottomOf="@+id/labelEvent" />
+            app:layout_constraintTop_toBottomOf="@+id/labelEvent"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -129,7 +138,9 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toRightOf="@+id/imageLien"
             app:layout_constraintRight_toRightOf="@+id/fonctionLabel"
-            app:layout_constraintTop_toBottomOf="@+id/fonctionLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/fonctionLabel"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/labelEvent"
@@ -140,7 +151,8 @@
             android:text="Evenements créés"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageLien" />
+            app:layout_constraintTop_toBottomOf="@+id/imageLien"
+            android:layout_marginStart="22dp" />
 
         <TextView
             android:id="@+id/labelParticipations"
@@ -154,25 +166,44 @@
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintLeft_toRightOf="@+id/labelEvent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageLien" />
+            app:layout_constraintTop_toBottomOf="@+id/imageLien"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/modifierCompteBouton"
-            android:layout_width="211dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/fond_bouton"
             android:onClick="modifierCompte"
-            android:text="Modifier mon compte"
+            android:text="   Modifier mon compte   "
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelEventsNum" />
+            app:layout_constraintTop_toBottomOf="@+id/listView"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="268dp"
+            android:layout_height="165dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEventsNum"
+            tools:layout_editor_absoluteY="275dp"
+            tools:layout_editor_absoluteX="68dp" />
 
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>
