@@ -5,15 +5,20 @@ package fr.univ_lille1.iutinfo.sportin;
  */
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,19 +28,37 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageNav extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private List<String> listProg;
-    private List<String> listRenc;
+    private List<String> listProg= new ArrayList<>();
+    private List<String> listRenc= new ArrayList<>();
+    private String pass="titi:titi";
+    JSONArray array;
+
+    private String url = "http://172.18.49.2:8080/v1/events";
 
     ListView list;
 
@@ -61,25 +84,75 @@ public class PageNav extends AppCompatActivity
 
         //TODO lister les events de la bdd
 
+        // Initialize a new RequestQueue instance
+        RequestQueue queue = Volley.newRequestQueue(this);
 
 
 
+        JsonArrayRequest JsonRequest = new JsonArrayRequest(
+                Request.Method.GET,
+                url,
+                null,
+                new Response.Listener<JSONArray>() {
+
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        int nb;
+
+                            nb=response.length();
+
+
+                        for (int i=0;i<nb;i++) {
+
+                            try {
+
+                                JSONObject object =response.getJSONObject(i);
+
+                                String nomEvent =object.getString("label");
+                                String jour=object.getString("dateEvent");
+                                int prix = object.getInt("price");
+                                int nbParticipantNeeded = object.getInt("participants");
+                                Toast.makeText(getApplicationContext(),object.toString(),Toast.LENGTH_LONG).show();
+                                String res=nomEvent+"\n"+jour+"\n"+prix+"€"+"\n0"+"/"+nbParticipantNeeded;
+                                Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
+                                listProg.add(res);
 
 
 
+                            }catch(JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
-        listProg = new ArrayList<>();
-        //TODO modifier le for (en while enventuellement?)
-        for(int i = 0;i<4 ; i++){ //TODO ajouter toutes les rencontres futures de l'utilisateur
-            String nomSport ="Futsal";
-            String nomSalle="Footsal, Villeneuve d'Ascq Cousinerie";
-            String jour = "Mercredi";
-            String heure = "19h00";
-            String prix="8";
-            String nbInscrits = "8";
-            String nbParticipantNeeded = "10";
-            listProg.add(nomSport+"\n"+nomSalle+"\n"+jour+","+heure+"\n"+prix+"€"+"\n"+nbInscrits+"/"+nbParticipantNeeded);
-        }
+
+                    }
+                },
+                new Response.ErrorListener(){
+                    @Override
+                    public void onErrorResponse(VolleyError error){
+                        error.printStackTrace();
+                        //TODO: handle failure
+
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+
+                    }
+                }) {
+
+            public Map<String, String> getHeaders(){
+                Map<String, String>  headers = new HashMap<String, String>();
+                String credentials = pass;
+                String auth = "Basic "+ Base64.encodeToString(credentials.getBytes(),Base64.NO_WRAP);
+                headers.put("Accept", "application/json");
+                headers.put("Authorization", auth);
+                return headers;
+            }
+
+        };
+        ;
+
+        // Add JsonObjectRequest to the RequestQueue
+        queue.add(JsonRequest);
+
 
         listRenc = new ArrayList<>();
         for(int i = 0;i<10 ; i++){ //TODO ajouter 10 rencontres interessantes pour l'utilisateur

@@ -36,8 +36,7 @@ import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageCreerEvent extends AppCompatActivity {
 
-    public ConnexionServ con = ConnexionServ.getInstance();
-    String pass="toto:toto";
+    String pass="titi:titi";
 
 
 
@@ -57,7 +56,7 @@ public class PageCreerEvent extends AppCompatActivity {
             EditText price =(EditText) findViewById(R.id.prixEvent);
             EditText participants =(EditText) findViewById(R.id.nbPartEvent);
 
-            String url = "http://172.18.49.6:8080/v1/events";
+            String url = "http://172.18.49.2:8080/v1/events";
             Map<String, String> params = new HashMap<>();
 
             params.put("label", label.getText().toString());
@@ -81,13 +80,13 @@ public class PageCreerEvent extends AppCompatActivity {
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
                     //TODO: handle failure
-                    Log.e("TAG", error.getMessage(), error);
+
                 }
             }) {
 
                 public Map<String, String> getHeaders(){
                     Map<String, String>  headers = new HashMap<String, String>();
-                    String credentials = "toto:toto";
+                    String credentials = pass;
                     String auth = "Basic "+ Base64.encodeToString(credentials.getBytes(),Base64.NO_WRAP);
                     headers.put("Accept", "application/json");
                     headers.put("Authorization", auth);
