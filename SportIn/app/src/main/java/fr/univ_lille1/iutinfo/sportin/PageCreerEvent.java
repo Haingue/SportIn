@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -36,8 +37,7 @@ import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 public class PageCreerEvent extends AppCompatActivity {
 
-    public ConnexionServ con = ConnexionServ.getInstance();
-    String pass="toto:toto";
+    String pass="titi:titi";
 
 
 
@@ -48,18 +48,22 @@ public class PageCreerEvent extends AppCompatActivity {
 
     public void creerEvent(View view){
 
+
         if(true) { //TODO verifier que l'event est valide
 
             //TODO creer l'event
+            EditText label =(EditText) findViewById(R.id.nomEvent);
+            EditText dateEvent =(EditText) findViewById(R.id.dateEvent);
+            EditText price =(EditText) findViewById(R.id.prixEvent);
+            EditText participants =(EditText) findViewById(R.id.nbPartEvent);
 
-
-            String url = "http://172.18.49.6:8080/v1/events";
+            String url = "http://172.18.49.2:8080/v1/events";
             Map<String, String> params = new HashMap<>();
-            
-            params.put("label", "elodie");
-            params.put("dateEvent", "2010-05-05T10:00");
-            params.put("price", "10");
-            params.put("participants", "10");
+
+            params.put("label", label.getText().toString());
+            params.put("dateEvent", dateEvent.getText().toString());
+            params.put("price", price.getText().toString());
+            params.put("participants", participants.getText().toString());
             JSONObject parameters = new JSONObject(params);
             RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -70,19 +74,20 @@ public class PageCreerEvent extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
                     //TODO: handle success
                     Log.d("TAG", response.toString());
+                    Toast.makeText(getApplicationContext(),"evenement créé",Toast.LENGTH_LONG).show();
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
                     //TODO: handle failure
-                    Log.e("TAG", error.getMessage(), error);
+
                 }
             }) {
 
                 public Map<String, String> getHeaders(){
                     Map<String, String>  headers = new HashMap<String, String>();
-                    String credentials = "toto:toto";
+                    String credentials = pass;
                     String auth = "Basic "+ Base64.encodeToString(credentials.getBytes(),Base64.NO_WRAP);
                     headers.put("Accept", "application/json");
                     headers.put("Authorization", auth);
