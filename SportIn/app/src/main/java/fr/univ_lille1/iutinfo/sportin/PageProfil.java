@@ -1,6 +1,7 @@
 package fr.univ_lille1.iutinfo.sportin;
 
 /**
+ * Page qui affiche le profil de l'utilisateur
  * Created by parissej and martele on 26/03/18.
  */
 import android.content.Intent;

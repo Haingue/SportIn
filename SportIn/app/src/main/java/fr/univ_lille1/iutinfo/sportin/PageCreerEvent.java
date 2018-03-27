@@ -30,6 +30,7 @@ import java.util.Map;
 import fr.univ_lille1.iutinfo.communication.ConnexionServ;
 
 /**
+ * Page de formulaire pour créer un évènement
  * Created by magnierb on 23/03/18.
  */
 
